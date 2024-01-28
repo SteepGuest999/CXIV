@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+
+:root {
+    --main-color: #b8c0ff;
+    --text1-color: #112A46;
+    --text2-color: #112A46;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--main-color);
+    color: var(--text1-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: var(--text1-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: var(--text2-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text1-color);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.home .home-image {
+    position: relative;
+}
+
+.home .home-image img {
+    z-index: 2;
+    max-width: 650px;
+    margin-left: 10%;
+}
+
+.image-fluid {
+    height: auto;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: var(--text2-color);
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00FFFF;
+    border: 2px solid #00BFFF;
+    border-radius: 22px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    border: 2px solid #A9A9A9;
+    color: white;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #A9A9A9;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00BFFF;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.product {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: white;
+    justify-content: space-around;
+}
+
+.product-information h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text1-color);
+}
+
+.another h1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text1-color);
+}
+
+.another p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: var(--text2-color);
+}
+.product-information p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: var(--text2-color);
+}
+
+.product-information .btn-box {
+    position: relative;
+    width: 345px;
+    height: 50px;
+}
+
+.product-information .btn-box a {
+    background: rgb(47, 47, 47);
+    border: 2px solid rgb(47, 47, 47);
+    color: white;
+    font-size: 18px;
+}
+
+.product-information .btn-box a::before {
+    background: rgb(47, 47, 47);
+    border: 2px solid rgb(47, 47, 47);
+}
+
+.product .product-item {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+
+.product-section .product-item h3, .product-section .product-item strong {
+    color: #2f2f2f;
+    text-decoration: none;
+}
+
+.product-section .product-item h3 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.slick-slider {
+    display: flex !important;
+    align-items: center;
+    gap: 3%;
+}
+
+.testimonial-section .carousel .title {
+    color: #2f2f2f;
+}
+
+.testimonial-section .carousel .carousel__item {
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.forest{
+    position: relative; 
+}
+
+.footer {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.footer .container {
+    position: relative;
+}
+
+.footer .sofa-image {
+    position: absolute;
+    top: -200px;
+    z-index: 1;
+    right: 0;
+}
+
+.footer .sofa-image img {
+    max-width: 380px;
+    height: auto;
+}
+
+.footer .subscription-form {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+}
+
+.footer .subscription-form h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3b5d50;
+    align-items: center;
+    display: flex;
+}
+
+.footer .border-top {
+    border-color: #dce5e4;
+}
+
+.footer .subscription-form .btn {
+    border-radius: 10px !important;
+    background: #3b5d50;
+    border-color: #3b5d50;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+}
+
+.footer .subscription-form .form-control {
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    width: 20%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+}
+
+.footer-section .border-top.copyright {
+    font-size: 14px !important;
+}
+
+.footer-section .border-top {
+    border-color: #dce5e4;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+    .burger-menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    
+    .burger-menu::before,
+    .burger-menu::after {
+        content: ''; /* пустой контент */
+        background: #fff; /*цвет бургера*/
+        position: absolute; /* позиция для общего блока*/
+        width: 100%; /* ширина*/
+        height: 2px; /* толщина полосок бургера */
+    }
+
+    .burger-menu::before {
+        top: 0; /* расположение верхней линии бургера */
+    }
+
+    .burger-menu span { /*средняя линия в виде span*/
+        background: #fff;
+        position: absolute; 
+        width: 100%;
+        top: 9px;
+        height: 2px; 
+    }
+    
+    .burger-menu::after {
+        bottom: 0; /* расположение нижней линии бургера */
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background: #272727;
+        border: 1px solid #fff;
+        padding: 20px 10px;
+        transform: translateX(100%);
+    }
+    
+    .navbar a {
+        flex-direction: column;
+        text-align: right;
+    }
+    
+    .home-content h1 {
+        position: relative;
+        line-height: 1.2;
+    }
+    
+    .home-content h3 {
+        position: relative;
+    }
+    
+    .home-content p {
+        position: relative;
+        margin: 20px 0 20px;
+    }
+}
